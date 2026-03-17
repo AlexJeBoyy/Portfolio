@@ -35,22 +35,22 @@ function isTabModuleActive(modulePath: string) {
 </script>
 
 <template>
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/90 bg-zinc-950/95 backdrop-blur">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-red-600/10 bg-zinc-950/98 backdrop-blur-md">
     <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
-      <NuxtLink to="/" class="brand-title text-xl font-extrabold tracking-tight text-red-500">
-        Alex Strikwerda
+      <NuxtLink to="/" class="brand-title text-lg font-black tracking-tighter text-red-500 hover:text-red-400 transition">
+        AS
       </NuxtLink>
 
-      <nav class="flex items-center gap-1" aria-label="Main navigation">
+      <nav class="flex items-center gap-0.5" aria-label="Main navigation">
         <NuxtLink
           v-for="module in mainModules"
           :key="module.name"
           :to="module.path"
-          class="rounded-full px-3 py-1.5 text-sm font-medium transition"
+          class="rounded-lg px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition"
           :class="
             isMainModuleActive(module.path)
-              ? 'bg-red-600/20 text-red-300 ring-1 ring-red-500/40'
-              : 'text-zinc-300 hover:bg-zinc-800 hover:text-zinc-100'
+              ? 'bg-red-600 text-zinc-950 shadow-lg shadow-red-600/50'
+              : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900'
           "
         >
           {{ module.title }}

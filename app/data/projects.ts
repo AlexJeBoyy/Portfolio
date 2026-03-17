@@ -1,6 +1,7 @@
 export type Project = {
   slug: string
   title: string
+  genre: string
   cardSummary: string
   description: string
   features: string[]
@@ -14,6 +15,7 @@ export const projects: Project[] = [
   {
     slug: 'prepare-to-scare',
     title: 'Prepare To Scare',
+    genre: 'Simulation',
     cardSummary: 'Customization, Halloween, GameJam',
     description:
       'A game where you can customize your own zombie to go scare at Halloween. This game was made at a 3 day Gamejam. I made all the code and collaborated with an artist for assets.',
@@ -31,6 +33,7 @@ export const projects: Project[] = [
   {
     slug: 'robot-takeover',
     title: 'Robot Takeover',
+    genre: 'FPS',
     cardSummary: 'FPS, Action, 3D',
     description:
       "My first self-made game. It's an FPS where you need to shoot robots to win, with two guns and a grappling hook.",
@@ -42,6 +45,7 @@ export const projects: Project[] = [
   {
     slug: 'cats-vs-birds',
     title: 'Cats vs Birds',
+    genre: 'Top-Down Shooter',
     cardSummary: 'Top-Down Shooter, Pixel Graphics, Action',
     description:
       'Top-down shooter where you kill birds as a cat. If you clear enemies and collect the key you can open the door and win.',
@@ -55,6 +59,7 @@ export const projects: Project[] = [
   {
     slug: 'horse-jumping',
     title: 'Horse Jumping',
+    genre: 'Platformer',
     cardSummary: 'Platformer, Pixel Graphics, Horse',
     description:
       'Horse parkour game where you can get smaller to get under obstacles. You speed up over time and can switch movement speeds.',

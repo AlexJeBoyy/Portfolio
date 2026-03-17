@@ -6,7 +6,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Game developer portfolio of Alex Strikwerda featuring Unity and C# projects.'
+        'Game developer portfolio of Alex Strikwerda featuring projects.'
     }
   ]
 })
@@ -23,7 +23,7 @@ useHead({
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700;800&display=swap');
 
 body {
   font-family: 'Space Grotesk', sans-serif;
@@ -33,6 +33,7 @@ h1,
 h2,
 h3,
 .brand-title {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
 }
 </style>
