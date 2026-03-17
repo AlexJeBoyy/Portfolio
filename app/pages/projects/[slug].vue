@@ -13,10 +13,12 @@ useHead({ title: project.title })
 </script>
 
 <template>
-  <section class="space-y-8">
+  <section class="space-y-10">
     <div class="space-y-3">
-      <h1 class="text-3xl font-extrabold">{{ project.title }}</h1>
-      <p class="max-w-3xl text-zinc-300">{{ project.description }}</p>
+      <p class="section-label">{{ project.genre }}</p>
+      <h1 class="text-5xl font-black">{{ project.title }}</h1>
+      <div class="accent-line" />
+      <p class="max-w-3xl pt-2 text-lg leading-relaxed text-zinc-300">{{ project.description }}</p>
     </div>
 
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -51,18 +53,10 @@ useHead({ title: project.title })
     </div>
 
     <div class="flex flex-wrap gap-3">
-      <a
-        :href="project.githubUrl"
-        target="_blank"
-        rel="noreferrer"
-        class="rounded-full border border-red-600 px-5 py-2 text-sm font-semibold text-red-300 transition hover:bg-red-600/20"
-      >
+      <a :href="project.githubUrl" target="_blank" rel="noreferrer" class="btn-outline">
         View on GitHub
       </a>
-      <NuxtLink
-        to="/projects/"
-        class="rounded-full border border-zinc-600 px-5 py-2 text-sm font-semibold text-zinc-200 transition hover:bg-zinc-800"
-      >
+      <NuxtLink to="/projects/" class="btn-ghost">
         Back to Projects
       </NuxtLink>
     </div>

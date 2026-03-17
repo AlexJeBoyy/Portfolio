@@ -1,1 +1,25 @@
+# IDE
 .idea
+.vscode
+
+# Dependencies
+node_modules
+
+# Nuxt build output
+.nuxt
+.output
+.cache
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

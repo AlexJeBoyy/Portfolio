@@ -15,7 +15,9 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 interface _GlobalComponents {
   AppHeader: typeof import("../../app/components/AppHeader.vue")['default']
+  PageHeader: typeof import("../../app/components/PageHeader.vue")['default']
   ProjectCard: typeof import("../../app/components/ProjectCard.vue")['default']
+  SkillGroup: typeof import("../../app/components/SkillGroup.vue")['default']
   SocialIcon: typeof import("../../app/components/SocialIcon.vue")['default']
   NuxtWelcome: typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
   NuxtLayout: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -42,7 +44,9 @@ interface _GlobalComponents {
   Body: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Body']
   NuxtIsland: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
   LazyAppHeader: LazyComponent<typeof import("../../app/components/AppHeader.vue")['default']>
+  LazyPageHeader: LazyComponent<typeof import("../../app/components/PageHeader.vue")['default']>
   LazyProjectCard: LazyComponent<typeof import("../../app/components/ProjectCard.vue")['default']>
+  LazySkillGroup: LazyComponent<typeof import("../../app/components/SkillGroup.vue")['default']>
   LazySocialIcon: LazyComponent<typeof import("../../app/components/SocialIcon.vue")['default']>
   LazyNuxtWelcome: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
   LazyNuxtLayout: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>

@@ -38,7 +38,7 @@ function isTabModuleActive(modulePath: string) {
   <header class="fixed inset-x-0 top-0 z-50 border-b border-red-600/10 bg-zinc-950/98 backdrop-blur-md">
     <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
       <NuxtLink to="/" class="brand-title text-lg font-black tracking-tighter text-red-500 hover:text-red-400 transition">
-        AS
+        Alex Strikwerda
       </NuxtLink>
 
       <nav class="flex items-center gap-0.5" aria-label="Main navigation">

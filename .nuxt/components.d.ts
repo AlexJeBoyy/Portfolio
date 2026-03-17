@@ -15,7 +15,9 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 
 export const AppHeader: typeof import("../app/components/AppHeader.vue")['default']
+export const PageHeader: typeof import("../app/components/PageHeader.vue")['default']
 export const ProjectCard: typeof import("../app/components/ProjectCard.vue")['default']
+export const SkillGroup: typeof import("../app/components/SkillGroup.vue")['default']
 export const SocialIcon: typeof import("../app/components/SocialIcon.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -42,7 +44,9 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const LazyAppHeader: LazyComponent<typeof import("../app/components/AppHeader.vue")['default']>
+export const LazyPageHeader: LazyComponent<typeof import("../app/components/PageHeader.vue")['default']>
 export const LazyProjectCard: LazyComponent<typeof import("../app/components/ProjectCard.vue")['default']>
+export const LazySkillGroup: LazyComponent<typeof import("../app/components/SkillGroup.vue")['default']>
 export const LazySocialIcon: LazyComponent<typeof import("../app/components/SocialIcon.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>

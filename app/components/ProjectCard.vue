@@ -20,15 +20,19 @@ defineProps<{
         decoding="async"
       >
       <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent opacity-70" />
-      <span class="absolute right-3 top-3 rounded-lg border border-red-500 bg-red-600/40 px-3 py-1.5 text-xs font-black uppercase tracking-wider text-red-100 backdrop-blur-sm shadow-lg shadow-red-600/30">
+      <span class="absolute right-3 top-3 rounded-lg border border-red-500 bg-red-600/40 px-3 py-1.5 text-xs font-black uppercase tracking-wider text-red-100 backdrop-blur-sm">
         {{ project.genre }}
       </span>
     </div>
     <div class="space-y-3 p-6">
-      <h3 class="text-xl font-black text-zinc-100 group-hover:text-red-400 transition">{{ project.title }}</h3>
-      <p class="text-sm text-zinc-400 leading-relaxed">{{ project.cardSummary }}</p>
+      <h3 class="text-xl font-black text-zinc-100 transition group-hover:text-red-400">{{ project.title }}</h3>
+      <p class="text-sm leading-relaxed text-zinc-400">{{ project.cardSummary }}</p>
       <div class="flex flex-wrap gap-2 pt-3">
-        <span v-for="tech in project.technologies.slice(0, 2)" :key="tech" class="text-xs font-bold rounded-md bg-red-600/20 border border-red-600/30 text-red-300 px-2.5 py-1.5 uppercase tracking-wider">
+        <span
+          v-for="tech in project.technologies.slice(0, 2)"
+          :key="tech"
+          class="rounded-md border border-red-600/30 bg-red-600/20 px-2.5 py-1.5 text-xs font-bold uppercase tracking-wider text-red-300"
+        >
           {{ tech }}
         </span>
       </div>

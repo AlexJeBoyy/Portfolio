@@ -13,34 +13,36 @@ const socials = [
 </script>
 
 <template>
-  <section class="space-y-8">
-    <div>
-      <h1 class="text-3xl font-bold">Contact <span class="text-red-500">me</span></h1>
-    </div>
+  <section class="space-y-10">
+    <PageHeader label="Get In Touch" title="Contact" highlight="Me" />
 
-    <div class="space-y-4">
-      <p class="text-zinc-400">Get in touch with me via email or social media.</p>
-      <p class="text-lg">
-        <a href="mailto:alexstrikwerda@hotmail.com" class="text-red-400 underline decoration-red-600/70 hover:text-red-300">
+    <div class="space-y-8">
+      <p class="max-w-xl text-lg leading-relaxed text-zinc-300">
+        Reach out via email or connect with me on social media.
+      </p>
+
+      <div class="space-y-2">
+        <p class="section-label">Email</p>
+        <a href="mailto:alexstrikwerda@hotmail.com" class="text-xl font-bold text-red-400 transition underline decoration-red-600/70 hover:text-red-300">
           alexstrikwerda@hotmail.com
         </a>
-      </p>
-    </div>
+      </div>
 
-    <div class="space-y-3">
-      <p class="text-sm font-medium text-zinc-400">Follow me</p>
-      <div class="flex gap-4" aria-label="Social links">
-        <a
-          v-for="social in socials"
-          :key="social.label"
-          :href="social.href"
-          target="_blank"
-          rel="noreferrer"
-          :aria-label="social.label"
-          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-red-600/70 text-red-400 transition hover:-translate-y-0.5 hover:bg-red-600/20 hover:text-red-300"
-        >
-          <SocialIcon :name="social.icon" />
-        </a>
+      <div class="space-y-4">
+        <p class="section-label">Follow Me</p>
+        <div class="flex gap-4" aria-label="Social links">
+          <a
+            v-for="social in socials"
+            :key="social.label"
+            :href="social.href"
+            target="_blank"
+            rel="noreferrer"
+            :aria-label="social.label"
+            class="social-icon-btn"
+          >
+            <SocialIcon :name="social.icon" />
+          </a>
+        </div>
       </div>
     </div>
   </section>

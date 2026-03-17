@@ -27,13 +27,6 @@ export const navigationModules: AppNavModule[] = [
     name: 'projects',
     title: 'Projects',
     path: '/projects',
-    tabModules: [
-      { name: 'projects-all', title: 'All', path: '/projects' },
-      { name: 'projects-prepare-to-scare', title: 'Prepare To Scare', path: '/projects/prepare-to-scare' },
-      { name: 'projects-robot-takeover', title: 'Robot Takeover', path: '/projects/robot-takeover' },
-      { name: 'projects-cats-vs-birds', title: 'Cats vs Birds', path: '/projects/cats-vs-birds' },
-      { name: 'projects-horse-jumping', title: 'Horse Jumping', path: '/projects/horse-jumping' }
-    ],
     childModules: [
       { name: 'projects-slug', title: 'Project Detail', path: '/projects/{slug}', hidden: true }
     ]
@@ -46,7 +39,7 @@ export const navigationModules: AppNavModule[] = [
 ]
 
 function normalizePath(path: string): string {
-  const cleanPath = path.split('?')[0].split('#')[0]
+  const cleanPath = (path.split('?')[0] ?? '').split('#')[0] ?? ''
   if (cleanPath === '/') return '/'
   return cleanPath.replace(/\/+$/, '')
 }
