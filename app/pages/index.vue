@@ -46,7 +46,7 @@ function resolveImagePath(path: string): string {
     </div>
   </section>
 
-  <section class="mt-24 space-y-10 border-t border-zinc-800/50 pt-16">
+  <section class="space-y-10 border-t border-zinc-800/50 pt-16">
     <div class="space-y-3">
       <p class="section-label">Featured</p>
       <h2 class="text-5xl font-black">Latest <span class="text-gradient">Games</span></h2>
