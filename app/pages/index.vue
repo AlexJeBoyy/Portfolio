@@ -4,13 +4,18 @@ import { projects } from '~/data/projects'
 useHead({ title: 'Home' })
 
 const featured = projects.slice(0, 2)
+const baseURL = useRuntimeConfig().app.baseURL
+
+function resolveImagePath(path: string): string {
+  return `${baseURL}${path.replace(/^\//, '')}`
+}
 </script>
 
 <template>
   <section class="space-y-12">
     <div class="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
       <img
-        src="/img/PalexGezicht.jpg"
+        :src="resolveImagePath('/img/PalexGezicht.jpg')"
         alt="Portrait of Alex Strikwerda"
         class="mx-auto aspect-square w-56 rounded-2xl border-2 border-red-600/40 object-cover shadow-2xl shadow-red-900/30 sm:w-80"
         draggable="false"

@@ -4,9 +4,14 @@ import { getProjectBySlug } from '~/data/projects'
 const route = useRoute()
 const slug = String(route.params.slug)
 const project = getProjectBySlug(slug)
+const baseURL = useRuntimeConfig().app.baseURL
 
 if (!project) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
+}
+
+function resolveImagePath(path: string): string {
+  return `${baseURL}${path.replace(/^\//, '')}`
 }
 
 useHead({ title: project.title })
@@ -25,7 +30,7 @@ useHead({ title: project.title })
       <img
         v-for="image in project.images"
         :key="image"
-        :src="image"
+        :src="resolveImagePath(image)"
         :alt="`${project.title} screenshot`"
         class="h-56 w-full rounded-xl border border-zinc-800 object-cover"
         loading="lazy"

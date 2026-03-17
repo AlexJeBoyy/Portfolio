@@ -8,7 +8,10 @@ node_modules
 # Nuxt build output
 .nuxt
 .output
+.output/**
 .cache
+dist
+dist/**
 
 # Environment variables
 .env

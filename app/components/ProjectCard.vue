@@ -4,6 +4,12 @@ import type { Project } from '~/data/projects'
 defineProps<{
   project: Project
 }>()
+
+const baseURL = useRuntimeConfig().app.baseURL
+
+function resolveImagePath(path: string): string {
+  return `${baseURL}${path.replace(/^\//, '')}`
+}
 </script>
 
 <template>
@@ -13,7 +19,7 @@ defineProps<{
   >
     <div class="relative overflow-hidden">
       <img
-        :src="project.images[0]"
+        :src="resolveImagePath(project.images[0] ?? '')"
         :alt="project.title"
         class="h-56 w-full object-cover transition duration-300 group-hover:scale-110"
         loading="lazy"
