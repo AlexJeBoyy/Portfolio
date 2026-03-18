@@ -28,6 +28,18 @@ export const projects: Project[] = [
       {
         name: 'Livia van Leeuwen (Player assets/animation)',
         link: 'https://www.behance.net/liviavanleeuwen'
+      },
+      {
+        name: 'Dean (UI)',
+        link: ''
+      },
+      {
+        name: 'Eric (3D models)',
+        link: ''
+      },
+      {
+        name: 'Test (Painting assets)',
+        link: ''
       }
     ],
     githubUrl: 'https://github.com/AlexJeBoyy/Rijksmuseum',
