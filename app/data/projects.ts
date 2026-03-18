@@ -22,7 +22,7 @@ export const projects: Project[] = [
       'A 3D mystery puzzle game where players find missing objects and characters from paintings, then return them to the correct painting. This project was created as a school assignment for the Rijksmuseum.',
     features: ['3D environment', 'Object interaction', 'Puzzle-solving'],
     learned:
-      'I improved my work with multi-camera setups, object interaction systems, and puzzle design that matches an art-focused museum theme.',
+      'I improved my work with multi-camera setups, object interaction systems, and puzzle design that matches an art-focused museum theme. I made all of the code for (exept ui) for this project.',
     technologies: ['C#, Unity, Procreate, Blender, Clip Studio Paint'],
     contributors: [
       {
@@ -43,7 +43,35 @@ export const projects: Project[] = [
       }
     ],
     githubUrl: 'https://github.com/AlexJeBoyy/Rijksmuseum',
-    images: ['/img/RM1.png', '/img/RM2.png', '/img/RM3.png']
+    images: ['/img/RM2.png', '/img/RM1.png', '/img/RM3.png']
+  },
+  {
+    slug: 'consumedbylight',
+    title: 'Consumed by Light',
+    genre: 'Horde shooter',
+    cardSummary: 'Horde shooter, wave-based, 3D',
+    description:
+      'A 3D horde shooter where you fight off waves of enemies ',
+    features: ['Different enemys', 'Telekinesis mechanics', 'Enemy AI'],
+    learned:
+      'I made the player movement from scratch with sliding, dash and sprint mechanics. I learned a lot about how gravity and physics work in Unity.',
+    technologies: ['C#, Unity, Blender'],
+    contributors: [
+      {
+        name: 'Vigo Linders (Shooting and telekinesis mechanics)',
+        link: 'https://github.com/Vigo-l'
+      },
+      {
+        name: 'Milan (Enemy ai)',
+        link: 'https://github.com/Milqz'
+      },
+      {
+        name: 'Evan (3D models)',
+        link: 'https://github.com/lungcapacitytest'
+      },
+    ],
+    githubUrl: 'https://github.com/AlexJeBoyy/ConsumedByLight',
+    images: ['/img/CBL1.png', '/img/CBL4.png', '/img/CBL3.png']
   },
   {
     slug: 'prepare-to-scare',
