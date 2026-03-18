@@ -15,15 +15,15 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'rijksmuseum',
-    title: 'Rijksmuseum assignemnt',
-    genre: 'Mistery Game',
-    cardSummary: 'Mistery Game, 3D, Puzzle',
+    title: 'Rijksmuseum assignment',
+    genre: 'Mystery Game',
+    cardSummary: 'Mystery Game, 3D, Puzzle',
     description:
-      'A game where you need to find missing objects and characters from paintings and put them back in the right place. This was a school assignment for the Rijksmuseum.',
+      'A 3D mystery puzzle game where players find missing objects and characters from paintings, then return them to the correct painting. This project was created as a school assignment for the Rijksmuseum.',
     features: ['3D environment', 'Object interaction', 'Puzzle-solving'],
     learned:
-      'I learned how to work with multiple cameras, implement object interaction, and design puzzles that fit the theme of the Rijksmuseum.',
-    technologies: ['C#', 'Unity'],
+      'I improved my work with multi-camera setups, object interaction systems, and puzzle design that matches an art-focused museum theme.',
+    technologies: ['C#, Unity, Procreate, Blender, Clip Studio Paint'],
     contributors: [
       {
         name: 'Livia van Leeuwen (Player assets/animation)',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     ],
     learned:
       'I learned a lot about lists, moving data between scenes, and capturing screenshots in the right format and location.',
-    technologies: ['C#', 'Unity', 'GitHub', 'Procreate', 'Aseprite'],
+    technologies: ['C#, Unity, Procreate, Aseprite'],
     githubUrl: 'https://github.com/AlexJeBoyy/Zombie-Custom',
     images: ['/img/Zombie4.png', '/img/Zombie1.png', '/img/Zombie2.png']
   },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     description:
       "My first self-made game. It's an FPS where you need to shoot robots to win, with two guns and a grappling hook.",
     features: ['Different guns', 'AI pathfinding', 'Grappling hook'],
-    technologies: ['C#', 'Unity'],
+    technologies: ['C#, Unity'],
     githubUrl: 'https://github.com/AlexJeBoyy/FPS-1',
     images: ['/img/RobotTakeover-A.png', '/img/RobotTakeover-G.png', '/img/RobotTakeover-P.png']
   },
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     features: ['Fish for bullets', 'Enemy raycasting', 'Lighting effects'],
     learned:
       'This project helped me improve animation workflow and enemy detection raycasting in a top-down game.',
-    technologies: ['C#', 'Unity'],
+    technologies: ['C#, Unity'],
     githubUrl: 'https://github.com/AlexJeBoyy/CatsVSBirds/tree/main',
     images: ['/img/CVSB-Door.png', '/img/CVSB.png', '/img/CVSB-Enim.png']
   },
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     features: ['Point system', 'Ducking', 'Parkour'],
     learned:
       'I learned to create my own assets, use Unity sprites, generate maps, and build a high score save system.',
-    technologies: ['C#', 'Unity', 'Aseprite'],
+    technologies: ['C#, Unity, Aseprite'],
     githubUrl: 'https://github.com/AlexJeBoyy/HorseGame',
     images: ['/img/HJ_S.png', '/img/HJ_GO.png', '/img/HJ_Jump.png']
   }
