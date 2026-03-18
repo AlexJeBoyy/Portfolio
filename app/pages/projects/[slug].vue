@@ -57,6 +57,22 @@ useHead({ title: project.title })
       <p class="text-zinc-300">{{ project.learned }}</p>
     </div>
 
+    <div v-if="project.contributors?.length" class="space-y-2">
+      <h2 class="text-xl font-bold">Contributors</h2>
+      <ul class="space-y-1 text-zinc-300">
+        <li v-for="contributor in project.contributors" :key="contributor.link">
+          <a
+            :href="contributor.link"
+            target="_blank"
+            rel="noreferrer"
+            class="font-semibold text-red-400 transition hover:text-red-300"
+          >
+            {{ contributor.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <div class="flex flex-wrap gap-3">
       <a :href="project.githubUrl" target="_blank" rel="noreferrer" class="btn-outline">
         View on GitHub

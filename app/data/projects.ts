@@ -9,9 +9,30 @@ export type Project = {
   technologies: string[]
   githubUrl: string
   images: string[]
+  contributors?: { name: string; link: string }[] | null
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'rijksmuseum',
+    title: 'Rijksmuseum assignemnt',
+    genre: 'Mistery Game',
+    cardSummary: 'Mistery Game, 3D, Puzzle',
+    description:
+      'A game where you need to find missing objects and characters from paintings and put them back in the right place. This was a school assignment for the Rijksmuseum.',
+    features: ['3D environment', 'Object interaction', 'Puzzle-solving'],
+    learned:
+      'I learned how to work with multiple cameras, implement object interaction, and design puzzles that fit the theme of the Rijksmuseum.',
+    technologies: ['C#', 'Unity'],
+    contributors: [
+      {
+        name: 'Livia van Leeuwen (Player assets/animation)',
+        link: 'https://www.behance.net/liviavanleeuwen'
+      }
+    ],
+    githubUrl: 'https://github.com/AlexJeBoyy/Rijksmuseum',
+    images: ['/img/RM1.png', '/img/RM2.png', '/img/RM3.png']
+  },
   {
     slug: 'prepare-to-scare',
     title: 'Prepare To Scare',
