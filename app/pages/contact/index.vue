@@ -23,7 +23,7 @@ const socials = [
 
       <div class="space-y-2">
         <p class="section-label">Email</p>
-        <a href="mailto:alexstrikwerda@hotmail.com" class="text-xl font-bold text-red-400 transition underline decoration-red-600/70 hover:text-red-300">
+        <a href="mailto:alexstrikwerda@hotmail.com" class="text-xl font-bold text-cyan-300 transition underline decoration-cyan-500/70 hover:text-cyan-200">
           alexstrikwerda@hotmail.com
         </a>
       </div>

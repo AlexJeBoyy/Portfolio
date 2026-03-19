@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <div>
-    <h3 class="mb-4 text-lg font-bold text-red-400">{{ title }}</h3>
+    <h3 class="mb-4 text-lg font-bold text-red-300">{{ title }}</h3>
     <div class="grid gap-4">
       <div v-for="[name, value] in skills" :key="name" class="space-y-1.5">
         <div class="flex items-center justify-between">

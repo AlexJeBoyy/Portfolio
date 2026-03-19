@@ -30,16 +30,16 @@ export const projects: Project[] = [
         link: 'https://www.behance.net/liviavanleeuwen'
       },
       {
-        name: 'Dean (UI)',
-        link: ''
+        name: 'Dean Lemans (UI)',
+        link: 'https://linksta.cc/@Dean'
       },
       {
         name: 'Eric (3D models)',
         link: ''
       },
       {
-        name: 'Test (Painting assets)',
-        link: ''
+        name: 'Veerle de Lange (Painting assets)',
+        link: 'https://www.instagram.com/a_jinxing_ghoul?igsh=ZGZlYzhzdmU5dXpp&utm_source=qr'
       }
     ],
     githubUrl: 'https://github.com/AlexJeBoyy/Rijksmuseum',

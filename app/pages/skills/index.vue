@@ -76,11 +76,11 @@ const softSkills = [
       <div class="accent-line" />
       <div class="mt-6 space-y-6">
         <div class="space-y-1">
-          <p class="font-semibold text-red-400">Sint Lucas</p>
+          <p class="font-semibold text-red-300">Sint Lucas</p>
           <p class="text-sm text-zinc-400">Game Development Studies (2023–Present)</p>
         </div>
         <div class="space-y-1">
-          <p class="font-semibold text-red-400">Consulink / TimeOn</p>
+          <p class="font-semibold text-red-300">Consulink / TimeOn</p>
           <p class="text-sm text-zinc-400">Internship – Software Development (Aug 2025–Jan 2026)</p>
         </div>
       </div>

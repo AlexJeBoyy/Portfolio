@@ -14,6 +14,19 @@ export const navigationModules: AppNavModule[] = [
     path: '/'
   },
   {
+    name: 'projects',
+    title: 'Projects',
+    path: '/projects',
+    tabModules: [
+      { name: 'projects-unity', title: 'Unity', path: '/projects#unity' },
+      { name: 'projects-unreal', title: 'Unreal', path: '/projects#unreal' },
+      { name: 'projects-websites', title: 'Websites', path: '/projects#websites' }
+    ],
+    childModules: [
+      { name: 'projects-slug', title: 'Project Detail', path: '/projects/{slug}', hidden: true }
+    ]
+  },
+  {
     name: 'skills',
     title: 'Skills',
     path: '/skills',
@@ -21,14 +34,6 @@ export const navigationModules: AppNavModule[] = [
       { name: 'skills-hard', title: 'Hard Skills', path: '/skills#hard' },
       { name: 'skills-soft', title: 'Soft Skills', path: '/skills#soft' },
       { name: 'skills-education', title: 'Education', path: '/skills#education' }
-    ]
-  },
-  {
-    name: 'projects',
-    title: 'Projects',
-    path: '/projects',
-    childModules: [
-      { name: 'projects-slug', title: 'Project Detail', path: '/projects/{slug}', hidden: true }
     ]
   },
   {
