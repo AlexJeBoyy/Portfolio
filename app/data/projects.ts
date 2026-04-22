@@ -14,8 +14,32 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'rijksmuseum',
-    title: 'Rijksmuseum assignment',
+    slug: 'the-judge',
+    title: 'The Judge',
+    genre: 'Horror',
+    cardSummary: 'Choice-driven horror, 2D/3D, puzzle',
+    description:
+      'A choice-driven horror game where you decide whether people survive by judging how they look. You have to react quickly, read visual clues, and make the right call before it is too late.',
+    features: [
+      'Judge characters by visual clues',
+      'Choice-driven survival mechanic',
+      'Mix of 2D and 3D presentation'
+    ],
+    learned:
+      'I built the right-or-wrong judgment logic, helped with some of the animation work, and learned how to support a tense horror mood through simple interactive systems.',
+    technologies: ['C#', 'Unity', 'Procreate', 'ShaderLab', 'HLSL'],
+    contributors: [
+      {
+        name: 'Vigo Linders',
+        link: 'https://github.com/Vigo-l'
+      }
+    ],
+    githubUrl: 'https://github.com/AlexJeBoyy/the-judge',
+    images: ['/img/TJ1.png', '/img/TJ2.png', '/img/TJ3.png']
+  },
+  {
+    slug: 'the-missing-pieces',
+    title: 'The missing pieces',
     genre: 'Mystery Game',
     cardSummary: 'Mystery Game, 3D, Puzzle',
     description:
