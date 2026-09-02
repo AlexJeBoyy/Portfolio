@@ -14,6 +14,73 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: 'amaranthus-bloemen',
+    title: 'Amaranthus Bloemen',
+    genre: 'Website',
+    cardSummary: 'Professional florist website with Tina CMS admin panel',
+    description:
+      'A beautiful, responsive website for a local florist business showcasing their services including bridal work, funeral arrangements, and an integrated online shop. Built with modern web technologies and includes a full content management system for easy updates. The site features stunning photography of floral arrangements and seamless integration with their e-commerce platform.',
+    features: [
+      'Full-featured CMS for content management',
+      'Responsive design optimized for all devices',
+      'Image gallery for bridal and funeral arrangements',
+      'Integrated e-commerce shop',
+      'Markdown-based content with TinaCMS',
+      'SEO optimized with meta tags and structured data'
+    ],
+    learned:
+      'Built a production-ready client website using Next.js 14 with TinaCMS for headless CMS management. Implemented responsive design with Tailwind CSS, managed static generation for performance, and delivered a solution that balances beautiful design with seamless business functionality.',
+    technologies: ['Next.js 14', 'React 18', 'TypeScript', 'TinaCMS', 'Tailwind CSS', 'Markdown'],
+    githubUrl: 'https://github.com/AlexJeBoyy/Amaranthus',
+    images: ['/img/AmaranthusBloemen.png'],
+    contributors: null
+  },
+  {
+    slug: 'rotten-flesh-to-leather',
+    title: 'Rotten Flesh to Leather',
+    genre: 'Minecraft Plugin',
+    cardSummary: 'Multi-platform Minecraft plugin with 32K+ downloads',
+    description:
+      'A lightweight, vanilla-style Minecraft plugin that adds practical ways to convert rotten flesh into useful materials. Convert rotten flesh by smoking it into leather, or by smelting it into brown dye. Supports multiple mod loaders and is fully compatible with servers and single-player worlds.',
+    features: [
+      'Smoke rotten flesh into leather',
+      'Smelt rotten flesh into brown dye',
+      'Vanilla-style recipes',
+      'Multi-platform support (Fabric, Forge, NeoForge, Quilt)',
+      'Server and single-player compatible',
+      'MIT licensed'
+    ],
+    learned:
+      'Developed a clean, focused Minecraft plugin that prioritizes user experience and compatibility. Achieved 32.7K downloads by keeping the feature set simple and aligned with vanilla Minecraft design philosophy. Managed multi-loader support and maintained active updates.',
+    technologies: ['Minecraft', 'Java', 'Fabric', 'Forge', 'NeoForge', 'Quilt'],
+    githubUrl: 'https://github.com/AlexJeBoyy/FleshToLeather',
+    images: ['/img/RFTL.jpg'],
+    contributors: null
+  },
+  {
+    slug: 'gore-magala-mod',
+    title: 'Gore Magala Minecraft Mod',
+    genre: 'Minecraft Mod (WIP)',
+    cardSummary: 'Monster Hunter-inspired mod with custom creatures, weapons, and armor',
+    description:
+      'An in-progress Minecraft Fabric mod adding Gore Magala from Monster Hunter to Minecraft. Features a fully custom creature with AI, pathfinding, and combat mechanics, alongside a craftable armor set. All 3D models were created from scratch in Blockbench, including detailed textures, loot tables, and special attack abilities.',
+    features: [
+      'Custom Gore Magala creature with advanced AI',
+      // 'Switchaxe weapon with unique mechanics',
+      'Complete armor set with crafting recipes',
+      'Custom 3D models created in Blockbench',
+      'Loot drops and item management',
+      'Special attack cooldowns and combat systems',
+      'Integrated into Fabric mod ecosystem'
+    ],
+    learned:
+      'Mastered 3D model creation in Blockbench for Minecraft modding, building complex entity models from the ground up. Built sophisticated Minecraft modding systems including custom entity AI, model rigging, combat mechanics, and asset management. Gained experience with Fabric architecture, entity rendering, and integrating Monster Hunter mechanics into vanilla Minecraft gameplay.',
+    technologies: ['Java', 'Minecraft', 'Fabric', 'Blockbench', '3D Modeling', 'Texturing'],
+    githubUrl: 'https://github.com/AlexJeBoyy/MH-Gore-Magala-mod',
+    images: ['/img/GM1.png', '/img/GM2.png', '/img/GM3.png'],
+    contributors: null
+  },
+  {
     slug: 'the-judge',
     title: 'The Judge',
     genre: 'Horror',
@@ -35,7 +102,7 @@ export const projects: Project[] = [
       }
     ],
     githubUrl: 'https://github.com/AlexJeBoyy/the-judge',
-    images: ['/img/TJ1.png', '/img/TJ2.png', '/img/TJ3.png']
+    images: ['/img/TheJudge.png', '/img/TheJudge2.png']
   },
   {
     slug: 'the-missing-pieces',
@@ -47,7 +114,7 @@ export const projects: Project[] = [
     features: ['3D environment', 'Object interaction', 'Puzzle-solving'],
     learned:
       'I improved my work with multi-camera setups, object interaction systems, and puzzle design that matches an art-focused museum theme. I made all of the code for (exept ui) for this project.',
-    technologies: ['C#, Unity, Procreate, Blender, Clip Studio Paint'],
+    technologies: ['C#', 'Unity', 'Procreate', 'Blender', 'Clip Studio Paint'],
     contributors: [
       {
         name: 'Livia van Leeuwen (Player assets/animation)',
@@ -79,7 +146,7 @@ export const projects: Project[] = [
     features: ['Different enemys', 'Telekinesis mechanics', 'Enemy AI'],
     learned:
       'I made the player movement from scratch with sliding, dash and sprint mechanics. I learned a lot about how gravity and physics work in Unity.',
-    technologies: ['C#, Unity, Blender'],
+    technologies: ['C#', 'Unity', 'Blender'],
     contributors: [
       {
         name: 'Vigo Linders (Shooting and telekinesis mechanics)',
@@ -111,7 +178,7 @@ export const projects: Project[] = [
     ],
     learned:
       'I learned a lot about lists, moving data between scenes, and capturing screenshots in the right format and location.',
-    technologies: ['C#, Unity, Procreate, Aseprite'],
+    technologies: ['C#', 'Unity', 'Procreate', 'Aseprite'],
     githubUrl: 'https://github.com/AlexJeBoyy/Zombie-Custom',
     images: ['/img/Zombie4.png', '/img/Zombie1.png', '/img/Zombie2.png']
   },
@@ -123,9 +190,9 @@ export const projects: Project[] = [
     description:
       "My first self-made game. It's an FPS where you need to shoot robots to win, with two guns and a grappling hook.",
     features: ['Different guns', 'AI pathfinding', 'Grappling hook'],
-    technologies: ['C#, Unity'],
+    technologies: ['C#', 'Unity'],
+    images: ['/img/RobotTakeover-A.png', '/img/RobotTakeover-G.png', '/img/RobotTakeover-P.png'],
     githubUrl: 'https://github.com/AlexJeBoyy/FPS-1',
-    images: ['/img/RobotTakeover-A.png', '/img/RobotTakeover-G.png', '/img/RobotTakeover-P.png']
   },
   {
     slug: 'cats-vs-birds',
@@ -135,11 +202,9 @@ export const projects: Project[] = [
     description:
       'Top-down shooter where you kill birds as a cat. If you clear enemies and collect the key you can open the door and win.',
     features: ['Fish for bullets', 'Enemy raycasting', 'Lighting effects'],
-    learned:
-      'This project helped me improve animation workflow and enemy detection raycasting in a top-down game.',
-    technologies: ['C#, Unity'],
-    githubUrl: 'https://github.com/AlexJeBoyy/CatsVSBirds/tree/main',
-    images: ['/img/CVSB-Door.png', '/img/CVSB.png', '/img/CVSB-Enim.png']
+    technologies: ['C#', 'Unity'],
+    images: ['/img/CVSB-Door.png', '/img/CVSB.png', '/img/CVSB-Enim.png'],
+    githubUrl: 'https://github.com/AlexJeBoyy/CatsVSBirds/',
   },
   {
     slug: 'horse-jumping',
@@ -149,11 +214,9 @@ export const projects: Project[] = [
     description:
       'Horse parkour game where you can get smaller to get under obstacles. You speed up over time and can switch movement speeds.',
     features: ['Point system', 'Ducking', 'Parkour'],
-    learned:
-      'I learned to create my own assets, use Unity sprites, generate maps, and build a high score save system.',
-    technologies: ['C#, Unity, Aseprite'],
+    technologies: ['C#', 'Unity', 'Aseprite'],
+    images: ['/img/HJ_S.png', '/img/HJ_GO.png', '/img/HJ_Jump.png'],
     githubUrl: 'https://github.com/AlexJeBoyy/HorseGame',
-    images: ['/img/HJ_S.png', '/img/HJ_GO.png', '/img/HJ_Jump.png']
   }
 ]
 

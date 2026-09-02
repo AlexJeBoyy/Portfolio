@@ -15,7 +15,7 @@ function resolveImagePath(path: string): string {
 <template>
   <NuxtLink
     :to="`/projects/${project.slug}/`"
-    class="group relative overflow-hidden rounded-md border border-cyan-400/20 bg-[#0b1324]/70 transition hover:-translate-y-2 hover:border-cyan-300/65 hover:shadow-[0_0_24px_rgba(34,211,238,0.2)]"
+    class="group relative overflow-hidden rounded-lg border border-slate-700/60 bg-slate-800/50 transition hover:-translate-y-2 hover:border-slate-600 hover:shadow-lg"
   >
     <div class="relative overflow-hidden">
       <img
@@ -25,19 +25,19 @@ function resolveImagePath(path: string): string {
         loading="lazy"
         decoding="async"
       >
-      <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/30 to-transparent opacity-80" />
-      <span class="absolute right-3 top-3 rounded-sm border border-red-300/60 bg-red-500/30 px-3 py-1.5 text-xs font-black uppercase tracking-[0.14em] text-red-100 backdrop-blur-sm">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-80" />
+      <span class="absolute right-3 top-3 rounded-lg border border-blue-500/60 bg-blue-500/30 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-blue-100 backdrop-blur-sm">
         {{ project.genre }}
       </span>
     </div>
     <div class="space-y-3 p-6">
-      <h3 class="text-xl font-black text-zinc-100 transition group-hover:text-cyan-300">{{ project.title }}</h3>
-      <p class="text-sm leading-relaxed text-zinc-400">{{ project.cardSummary }}</p>
+      <h3 class="text-xl font-bold text-slate-100 transition group-hover:text-blue-400">{{ project.title }}</h3>
+      <p class="text-sm leading-relaxed text-slate-400">{{ project.cardSummary }}</p>
       <div class="flex flex-wrap gap-2 pt-3">
         <span
           v-for="tech in project.technologies.slice(0, 2)"
           :key="tech"
-          class="rounded-sm border border-cyan-400/35 bg-cyan-500/15 px-2.5 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cyan-200"
+          class="rounded-lg border border-blue-500/35 bg-blue-500/15 px-2.5 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-blue-300"
         >
           {{ tech }}
         </span>

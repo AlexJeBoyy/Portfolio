@@ -17,26 +17,26 @@ function resolveImagePath(path: string): string {
       <img
         :src="resolveImagePath('/img/AlexFoto.jpg')"
         alt="Portrait of Alex Strikwerda"
-        class="mx-auto aspect-square w-56 rounded-md border-2 border-cyan-400/40 object-cover shadow-2xl shadow-cyan-900/30 sm:w-80"
+        class="mx-auto aspect-square w-56 rounded-lg border border-slate-700 object-cover shadow-lg sm:w-80"
         draggable="false"
       />
       <div class="space-y-8">
         <div class="space-y-4">
-          <div class="inline-block rounded-sm border border-red-300/40 bg-red-400/10 px-3 py-1.5">
-            <p class="section-label">Game Developer</p>
+          <div class="inline-block rounded-lg border border-blue-500/40 bg-blue-500/10 px-3 py-1.5">
+            <p class="section-label">Developer & Creator</p>
           </div>
           <h1 class="text-6xl font-black leading-tight sm:text-7xl">
             Hi, I'm <span class="text-gradient">Alex</span>
           </h1>
           <div class="accent-line" />
         </div>
-        <p class="max-w-2xl text-lg leading-relaxed text-zinc-300">
-          I'm a game dev student who loves building games with <span class="font-bold text-cyan-300">Unity</span> and <span class="font-bold text-cyan-300">C#</span>. I enjoy turning ideas into playable experiences and learning something new with every project.
+        <p class="max-w-2xl text-lg leading-relaxed text-slate-300">
+          I'm a developer passionate about creating interactive experiences through <span class="font-bold text-blue-400">game development</span> with <span class="font-bold text-blue-400">Unity & C#</span>, combined with <span class="font-bold text-blue-400">web development</span> skills. I love solving complex problems and bringing creative ideas to life.
         </p>
-        <div class="flex flex-col gap-2 text-sm text-zinc-400">
-          <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-cyan-400" /> Born in 2006 • Game Dev Student</span>
-          <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-cyan-400" /> Sint Lucas</span>
-          <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-cyan-400" /> Multiple Projects in Progress</span>
+        <div class="flex flex-col gap-2 text-sm text-slate-400">
+          <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-blue-500" /> Born in 2006 • Game Dev Student</span>
+          <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-blue-500" /> Sint Lucas</span>
+          <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-blue-500" /> Multiple Projects in Progress</span>
         </div>
         <NuxtLink to="/projects/" class="btn-primary">
           <span>Explore Projects</span>
@@ -47,16 +47,16 @@ function resolveImagePath(path: string): string {
 
   </section>
 
-  <section class="space-y-10 border-t border-zinc-800/50 pt-16">
+  <section class="space-y-10 border-t border-slate-700/50 pt-16">
     <div class="space-y-3">
-      <p class="section-label">Featured</p>
-      <h2 class="text-5xl font-black">Latest <span class="text-gradient">Games</span></h2>
+      <p class="section-label">Featured Work</p>
+      <h2 class="text-5xl font-black">Selected <span class="text-gradient">Projects</span></h2>
     </div>
     <div class="grid gap-6 sm:grid-cols-2">
       <ProjectCard v-for="project in featured" :key="project.slug" :project="project" />
     </div>
-    <NuxtLink to="/projects/" class="group inline-flex items-center gap-2 font-bold uppercase tracking-[0.16em] text-cyan-300 transition hover:text-cyan-200">
-      <span>View all games</span>
+    <NuxtLink to="/projects/" class="group inline-flex items-center gap-2 font-bold text-blue-400 transition hover:text-blue-300">
+      <span>View all projects</span>
       <span class="text-xl transition group-hover:translate-x-1">→</span>
     </NuxtLink>
   </section>

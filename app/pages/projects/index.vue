@@ -3,45 +3,45 @@ import { projects } from '~/data/projects'
 
 useHead({ title: 'Projects' })
 
-type ProjectTab = 'unity' | 'unreal' | 'websites'
+type ProjectTab = 'games' | 'mods' | 'websites'
 
 const route = useRoute()
 
 const activeTab = computed<ProjectTab>(() => {
   const hash = route.hash.replace('#', '').toLowerCase()
-  if (hash === 'unreal') return 'unreal'
+  if (hash === 'mods') return 'mods'
   if (hash === 'websites') return 'websites'
-  return 'unity'
+  return 'games'
 })
 
 function isWebsiteProject(technologies: string[]): boolean {
   return technologies.some((tech) => /vue|nuxt|typescript|javascript|html|css|react|next/i.test(tech))
 }
 
-function isUnityProject(technologies: string[]): boolean {
-  return technologies.some((tech) => /unity/i.test(tech))
+function isGameProject(technologies: string[]): boolean {
+  return technologies.some((tech) => /unity|unreal|c#|c\+\+/i.test(tech))
 }
 
-function isUnrealProject(technologies: string[]): boolean {
-  return technologies.some((tech) => /unreal/i.test(tech))
+function isModProject(technologies: string[]): boolean {
+  return !isGameProject(technologies) && !isWebsiteProject(technologies)
 }
 
 const filteredProjects = computed(() => {
-  if (activeTab.value === 'unreal') {
-    return projects.filter((project) => isUnrealProject(project.technologies))
+  if (activeTab.value === 'mods') {
+    return projects.filter((project) => isModProject(project.technologies))
   }
 
   if (activeTab.value === 'websites') {
     return projects.filter((project) => isWebsiteProject(project.technologies))
   }
 
-  return projects.filter((project) => isUnityProject(project.technologies))
+  return projects.filter((project) => isGameProject(project.technologies))
 })
 
 const sectionHighlight = computed(() => {
-  if (activeTab.value === 'unreal') return 'Unreal'
+  if (activeTab.value === 'mods') return 'Mods/Plugins'
   if (activeTab.value === 'websites') return 'Websites'
-  return 'Unity'
+  return 'Games'
 })
 </script>
 

@@ -18,8 +18,8 @@ export const navigationModules: AppNavModule[] = [
     title: 'Projects',
     path: '/projects',
     tabModules: [
-      { name: 'projects-unity', title: 'Unity', path: '/projects#unity' },
-      { name: 'projects-unreal', title: 'Unreal', path: '/projects#unreal' },
+      { name: 'projects-games', title: 'Games', path: '/projects#games' },
+      { name: 'projects-mods', title: 'Mods/Plugins', path: '/projects#mods' },
       { name: 'projects-websites', title: 'Websites', path: '/projects#websites' }
     ],
     childModules: [
