@@ -30,31 +30,9 @@ export const projects: Project[] = [
     ],
     learned:
       'Built a production-ready client website using Next.js 14 with TinaCMS for headless CMS management. Implemented responsive design with Tailwind CSS, managed static generation for performance, and delivered a solution that balances beautiful design with seamless business functionality.',
-    technologies: ['Next.js 14', 'React 18', 'TypeScript', 'TinaCMS', 'Tailwind CSS', 'Markdown'],
+    technologies: ['Next.js', 'React', 'TypeScript', 'TinaCMS', 'Tailwind CSS', 'Markdown'],
     githubUrl: 'https://github.com/AlexJeBoyy/Amaranthus',
     images: ['/img/AmaranthusBloemen.png'],
-    contributors: null
-  },
-  {
-    slug: 'rotten-flesh-to-leather',
-    title: 'Rotten Flesh to Leather',
-    genre: 'Minecraft Plugin',
-    cardSummary: 'Multi-platform Minecraft plugin with 32K+ downloads',
-    description:
-      'A lightweight, vanilla-style Minecraft plugin that adds practical ways to convert rotten flesh into useful materials. Convert rotten flesh by smoking it into leather, or by smelting it into brown dye. Supports multiple mod loaders and is fully compatible with servers and single-player worlds.',
-    features: [
-      'Smoke rotten flesh into leather',
-      'Smelt rotten flesh into brown dye',
-      'Vanilla-style recipes',
-      'Multi-platform support (Fabric, Forge, NeoForge, Quilt)',
-      'Server and single-player compatible',
-      'MIT licensed'
-    ],
-    learned:
-      'Developed a clean, focused Minecraft plugin that prioritizes user experience and compatibility. Achieved 32.7K downloads by keeping the feature set simple and aligned with vanilla Minecraft design philosophy. Managed multi-loader support and maintained active updates.',
-    technologies: ['Minecraft', 'Java', 'Fabric', 'Forge', 'NeoForge', 'Quilt'],
-    githubUrl: 'https://github.com/AlexJeBoyy/FleshToLeather',
-    images: ['/img/RFTL.jpg'],
     contributors: null
   },
   {
@@ -80,6 +58,29 @@ export const projects: Project[] = [
     images: ['/img/GM1.png', '/img/GM2.png', '/img/GM3.png'],
     contributors: null
   },
+  {
+    slug: 'rotten-flesh-to-leather',
+    title: 'Rotten Flesh to Leather',
+    genre: 'Minecraft Plugin',
+    cardSummary: 'Multi-platform Minecraft plugin with 32K+ downloads',
+    description:
+      'A lightweight, vanilla-style Minecraft plugin that adds practical ways to convert rotten flesh into useful materials. Convert rotten flesh by smoking it into leather, or by smelting it into brown dye. Supports multiple mod loaders and is fully compatible with servers and single-player worlds.',
+    features: [
+      'Smoke rotten flesh into leather',
+      'Smelt rotten flesh into brown dye',
+      'Vanilla-style recipes',
+      'Multi-platform support (Fabric, Forge, NeoForge, Quilt)',
+      'Server and single-player compatible',
+      'MIT licensed'
+    ],
+    learned:
+      'Developed a clean, focused Minecraft plugin that prioritizes user experience and compatibility. Achieved 32.7K downloads by keeping the feature set simple and aligned with vanilla Minecraft design philosophy. Managed multi-loader support and maintained active updates.',
+    technologies: ['Minecraft', 'Java', 'Fabric', 'Forge', 'NeoForge', 'Quilt'],
+    githubUrl: 'https://github.com/AlexJeBoyy/FleshToLeather',
+    images: ['/img/RFTL.jpg'],
+    contributors: null
+  },
+  
   {
     slug: 'the-judge',
     title: 'The Judge',

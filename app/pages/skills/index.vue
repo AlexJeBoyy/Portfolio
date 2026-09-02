@@ -6,6 +6,7 @@ useHead({ title: 'Skills' })
 const gameDevSkills: [string, number][] = [
   ['C#', 85],
   ['Unity', 80],
+  ['Java', 75],
   ['Unreal Engine', 65],
   ['Blockbench', 70],
   ['Aseprite', 70]
@@ -27,9 +28,7 @@ const webSkills: [string, number][] = [
   ['HTML', 60]
 ]
 
-const otherLanguages: [string, number][] = [
-  ['Java', 75],
-]
+const otherLanguages: [string, number][] = []
 
 const softSkills = [
   'Creativity',
@@ -42,7 +41,22 @@ const softSkills = [
   'Interests in games'
 ]
 
+// Track which skills are actually used in projects
+const usedSkills = computed(() => {
+  const techSet = new Set<string>()
+  projects.forEach((project) => {
+    project.technologies.forEach((tech) => {
+      techSet.add(tech.toLowerCase())
+    })
+  })
+  return techSet
+})
+
 const selectedSkill = ref<string | null>(null)
+
+const isSkillUsed = (skillName: string): boolean => {
+  return usedSkills.value.has(skillName.toLowerCase())
+}
 
 const filteredProjects = computed(() => {
   if (!selectedSkill.value) return []
@@ -63,17 +77,20 @@ const filteredProjects = computed(() => {
       </div>
 
       <div class="grid gap-10 md:grid-cols-2">
-        <div class="space-y-10">
+        <!-- Game Development Skills (Buttons) -->
+        <div class="space-y-6">
           <div>
             <h3 class="mb-4 text-lg font-bold text-blue-400">Game Development</h3>
             <div class="flex flex-wrap gap-3">
               <button
                 v-for="[name] in gameDevSkills"
                 :key="name"
+                :disabled="!isSkillUsed(name)"
                 @click="selectedSkill = selectedSkill === name ? null : name"
                 :class="{
-                  'bg-blue-500 text-white border-blue-500': selectedSkill === name,
-                  'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100': selectedSkill !== name
+                  'bg-blue-500 text-white border-blue-500 cursor-pointer': selectedSkill === name && isSkillUsed(name),
+                  'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100 cursor-pointer': selectedSkill !== name && isSkillUsed(name),
+                  'border-slate-700 text-slate-400 cursor-not-allowed': !isSkillUsed(name)
                 }"
                 class="rounded-lg border px-4 py-2 text-sm font-medium transition"
               >
@@ -81,58 +98,41 @@ const filteredProjects = computed(() => {
               </button>
             </div>
           </div>
+
+          <!-- Development Tools (Images) -->
           <div>
-            <h3 class="mb-4 text-lg font-bold text-blue-400">Other Languages</h3>
-            <div class="flex flex-wrap gap-3">
-              <button
-                v-for="[name] in otherLanguages"
+            <h3 class="mb-4 text-lg font-bold text-blue-400">Development Tools</h3>
+            <div class="flex flex-wrap gap-4">
+              <div
+                v-for="[name] in toolsSkills"
                 :key="name"
-                @click="selectedSkill = selectedSkill === name ? null : name"
-                :class="{
-                  'bg-blue-500 text-white border-blue-500': selectedSkill === name,
-                  'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100': selectedSkill !== name
-                }"
-                class="rounded-lg border px-4 py-2 text-sm font-medium transition"
+                :title="name"
+                class="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-700 bg-slate-800/50 text-center text-xs font-medium text-slate-400"
               >
-                {{ name }}
-              </button>
+                <span class="px-2">{{ name }}</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="space-y-10">
-          <div>
-            <h3 class="mb-4 text-lg font-bold text-blue-400">Development Tools</h3>
-            <div class="flex flex-wrap gap-3">
-              <button
-                v-for="[name] in toolsSkills"
-                :key="name"
-                @click="selectedSkill = selectedSkill === name ? null : name"
-                :class="{
-                  'bg-blue-500 text-white border-blue-500': selectedSkill === name,
-                  'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100': selectedSkill !== name
-                }"
-                class="rounded-lg border px-4 py-2 text-sm font-medium transition"
-              >
-                {{ name }}
-              </button>
-            </div>
-          </div>
-          <div>
-            <h3 class="mb-4 text-lg font-bold text-blue-400">Web Development</h3>
-            <div class="flex flex-wrap gap-3">
-              <button
-                v-for="[name] in webSkills"
-                :key="name"
-                @click="selectedSkill = selectedSkill === name ? null : name"
-                :class="{
-                  'bg-blue-500 text-white border-blue-500': selectedSkill === name,
-                  'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100': selectedSkill !== name
-                }"
-                class="rounded-lg border px-4 py-2 text-sm font-medium transition"
-              >
-                {{ name }}
-              </button>
-            </div>
+
+        <!-- Web Development Skills (Buttons) -->
+        <div>
+          <h3 class="mb-4 text-lg font-bold text-blue-400">Web Development</h3>
+          <div class="flex flex-wrap gap-3">
+            <button
+              v-for="[name] in webSkills"
+              :key="name"
+              :disabled="!isSkillUsed(name)"
+              @click="selectedSkill = selectedSkill === name ? null : name"
+              :class="{
+                'bg-blue-500 text-white border-blue-500 cursor-pointer': selectedSkill === name && isSkillUsed(name),
+                'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100 cursor-pointer': selectedSkill !== name && isSkillUsed(name),
+                'border-slate-700 text-slate-400 cursor-not-allowed': !isSkillUsed(name)
+              }"
+              class="rounded-lg border px-4 py-2 text-sm font-medium transition"
+            >
+              {{ name }}
+            </button>
           </div>
         </div>
       </div>
