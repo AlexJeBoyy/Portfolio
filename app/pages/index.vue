@@ -15,7 +15,7 @@ function resolveImagePath(path: string): string {
   <section class="space-y-12">
     <div class="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
       <img
-        :src="resolveImagePath('/img/PalexGezicht.jpg')"
+        :src="resolveImagePath('/img/AlexFoto.jpg')"
         alt="Portrait of Alex Strikwerda"
         class="mx-auto aspect-square w-56 rounded-md border-2 border-cyan-400/40 object-cover shadow-2xl shadow-cyan-900/30 sm:w-80"
         draggable="false"
