@@ -19,6 +19,29 @@ const toolsSkills: [string, number][] = [
   ['GitHub', 75]
 ]
 
+const skillIconMap: Record<string, string> = {
+  'C#': 'csharp.png',
+  'Unity': 'unity-dark.png',
+  'Java': 'java.png',
+  'Unreal Engine': 'unreal-engine-dark.png',
+  'Blockbench': 'blockbench.png',
+  'Aseprite': 'aseprite-no-border.png',
+  'Visual Studio': 'visual-studio.png',
+  'Visual Studio Code': 'visual-studio-code.png',
+  'IntelliJ': 'intellij.png',
+  'GitHub': 'github-light.png',
+  'Vue': 'vue-js.png',
+  'TypeScript': 'typescript.png',
+  'Tailwind': 'tailwind.png',
+  'Next.js': 'nextjs-light.png',
+  'React': 'reactjs.png',
+  'HTML': 'html-light.png'
+}
+
+const getSkillIcon = (skillName: string): string | undefined => {
+  return skillIconMap[skillName]
+}
+
 const webSkills: [string, number][] = [
   ['Vue', 65],
   ['TypeScript', 65],
@@ -77,61 +100,88 @@ const filteredProjects = computed(() => {
       </div>
 
       <div class="grid gap-10 md:grid-cols-2">
-        <!-- Game Development Skills (Buttons) -->
+        <!-- Game Development Skills (Icons) -->
         <div class="space-y-6">
           <div>
             <h3 class="mb-4 text-lg font-bold text-blue-400">Game Development</h3>
-            <div class="flex flex-wrap gap-3">
+            <div class="flex flex-wrap gap-4">
               <button
                 v-for="[name] in gameDevSkills"
                 :key="name"
                 :disabled="!isSkillUsed(name)"
                 @click="selectedSkill = selectedSkill === name ? null : name"
+                :title="name"
                 :class="{
-                  'bg-blue-500 text-white border-blue-500 cursor-pointer': selectedSkill === name && isSkillUsed(name),
-                  'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100 cursor-pointer': selectedSkill !== name && isSkillUsed(name),
-                  'border-slate-700 text-slate-400 cursor-not-allowed': !isSkillUsed(name)
+                  'ring-2 ring-blue-500 scale-110': selectedSkill === name && isSkillUsed(name),
+                  'hover:scale-110': isSkillUsed(name),
+                  'cursor-not-allowed': !isSkillUsed(name)
                 }"
-                class="rounded-lg border px-4 py-2 text-sm font-medium transition"
+                class="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-700 bg-slate-800/50 transition-all"
               >
-                {{ name }}
+                <img
+                  v-if="getSkillIcon(name)"
+                  :src="`/img/icons/${getSkillIcon(name)}`"
+                  :alt="name"
+                  class="h-10 w-10 object-contain"
+                />
+                <span v-else class="text-xs font-medium text-slate-400">{{ name }}</span>
               </button>
             </div>
           </div>
 
-          <!-- Development Tools (Images) -->
+          <!-- Development Tools (Icons) -->
           <div>
             <h3 class="mb-4 text-lg font-bold text-blue-400">Development Tools</h3>
             <div class="flex flex-wrap gap-4">
-              <div
+              <button
                 v-for="[name] in toolsSkills"
                 :key="name"
+                :disabled="!isSkillUsed(name)"
+                @click="selectedSkill = selectedSkill === name ? null : name"
                 :title="name"
-                class="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-700 bg-slate-800/50 text-center text-xs font-medium text-slate-400"
+                :class="{
+                  'ring-2 ring-blue-500 scale-110': selectedSkill === name && isSkillUsed(name),
+                  'hover:scale-110': isSkillUsed(name),
+                  'cursor-not-allowed': !isSkillUsed(name)
+                }"
+                class="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-700 bg-slate-800/50 text-center text-xs font-medium text-slate-400 transition-all"
               >
-                <span class="px-2">{{ name }}</span>
-              </div>
+                <img
+                  v-if="getSkillIcon(name)"
+                  :src="`/img/icons/${getSkillIcon(name)}`"
+                  :alt="name"
+                  class="h-10 w-10 object-contain"
+                />
+                <span v-else class="px-2">{{ name }}</span>
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- Web Development Skills (Buttons) -->
+        <!-- Web Development Skills (Icons) -->
         <div>
           <h3 class="mb-4 text-lg font-bold text-blue-400">Web Development</h3>
-          <div class="flex flex-wrap gap-3">
+          <div class="flex flex-wrap gap-4">
             <button
               v-for="[name] in webSkills"
               :key="name"
               :disabled="!isSkillUsed(name)"
               @click="selectedSkill = selectedSkill === name ? null : name"
+              :title="name"
               :class="{
-                'bg-blue-500 text-white border-blue-500 cursor-pointer': selectedSkill === name && isSkillUsed(name),
-                'border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-slate-100 cursor-pointer': selectedSkill !== name && isSkillUsed(name),
-                'border-slate-700 text-slate-400 cursor-not-allowed': !isSkillUsed(name)
+                'ring-2 ring-blue-500 scale-110': selectedSkill === name && isSkillUsed(name),
+                'hover:scale-110': isSkillUsed(name),
+                'cursor-not-allowed': !isSkillUsed(name)
               }"
-              class="rounded-lg border px-4 py-2 text-sm font-medium transition"
+              class="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-700 bg-slate-800/50 transition-all"
             >
-              {{ name }}
+              <img
+                v-if="getSkillIcon(name)"
+                :src="`/img/icons/${getSkillIcon(name)}`"
+                :alt="name"
+                class="h-10 w-10 object-contain"
+              />
+              <span v-else class="text-xs font-medium text-slate-400">{{ name }}</span>
             </button>
           </div>
         </div>
