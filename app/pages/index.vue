@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import { getSortedProjects } from '~/data/projects'
+import { getRandomFeaturedProjects } from '~/data/projects'
 
 useHead({ title: 'Home' })
 
-const featured = getSortedProjects().slice(0, 2)
+const featured = ref([])
 const baseURL = useRuntimeConfig().app.baseURL
+
+// Load random featured projects on mount to avoid hydration issues
+onMounted(() => {
+  featured.value = getRandomFeaturedProjects(2)
+})
 
 function resolveImagePath(path: string): string {
   return `${baseURL}${path.replace(/^\//, '')}`

@@ -36,6 +36,7 @@ export const projects: Project[] = [
     websiteUrl: 'https://amaranthusbloemen.nl',
     images: ['/img/AmaranthusBloemen.png'],
     date: '12/09/2026',
+    featured: true,
     contributors: null
   },
   {
@@ -60,6 +61,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/AlexJeBoyy/MH-Gore-Magala-mod',
     images: ['/img/GM1.png', '/img/GM2.png', '/img/GM3.png'],
     date: '16/06/2026',
+    featured: true,
     contributors: null
   },
   {
@@ -101,6 +103,7 @@ export const projects: Project[] = [
       'I built the right-or-wrong judgment logic, helped with some of the animation work, and learned how to support a tense horror mood through simple interactive systems.',
     technologies: ['C#', 'Unity', 'Procreate', 'ShaderLab', 'HLSL'],
     date: '23/06/2025',
+    featured: true,
     contributors: [
       {
         name: 'Vigo Linders',
@@ -122,6 +125,7 @@ export const projects: Project[] = [
       'I improved my work with multi-camera setups, object interaction systems, and puzzle design that matches an art-focused museum theme. I made all of the code for (exept ui) for this project.',
     technologies: ['C#', 'Unity', 'Procreate', 'Blender', 'Clip Studio Paint'],
     date: '29/01/2025',
+    featured: true,
     contributors: [
       {
         name: 'Livia van Leeuwen (Player assets/animation)',
@@ -154,7 +158,8 @@ export const projects: Project[] = [
     learned:
       'I made the player movement from scratch with sliding, dash and sprint mechanics. I learned a lot about how gravity and physics work in Unity.',
     technologies: ['C#', 'Unity', 'Blender'],
-    date: '07/04/2025',
+    date: '07/04/2025',    
+    featured: true,    
     contributors: [
       {
         name: 'Vigo Linders (Shooting and telekinesis mechanics)',
@@ -252,6 +257,22 @@ function parseDate(dateStr: string): Date {
  */
 export function getSortedProjects(): Project[] {
   return [...projects].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
+}
+
+/**
+ * Get random featured projects (shuffled)
+ * @param count - Number of featured projects to return
+ * @returns Array of random featured projects, or all featured projects if less than count available
+ */
+export function getRandomFeaturedProjects(count: number = 2): Project[] {
+  const featured: Project[] = projects.filter((project) => project.featured)
+  
+  if (featured.length <= count) {
+    return featured.sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
+  }
+  
+  // Shuffle using random sort
+  return [...featured].sort(() => Math.random() - 0.5).slice(0, count)
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {
