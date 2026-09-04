@@ -7,7 +7,8 @@ export type Project = {
   features: string[]
   learned?: string
   technologies: string[]
-  githubUrl: string
+  githubUrl?: string
+  websiteUrl?: string
   images: string[]
   contributors?: { name: string; link: string }[] | null
 }
@@ -19,19 +20,18 @@ export const projects: Project[] = [
     genre: 'Website',
     cardSummary: 'Professional florist website with Tina CMS admin panel',
     description:
-      'A beautiful, responsive website for a local florist business showcasing their services including bridal work, funeral arrangements, and an integrated online shop. Built with modern web technologies and includes a full content management system for easy updates. The site features stunning photography of floral arrangements and seamless integration with their e-commerce platform.',
+      'A beautiful, responsive website for a local florist business showcasing their services including bridal work, funeral arrangements and contact infromation. Built with modern web technologies and includes a full content management system for easy updates.',
     features: [
       'Full-featured CMS for content management',
       'Responsive design optimized for all devices',
       'Image gallery for bridal and funeral arrangements',
-      'Integrated e-commerce shop',
       'Markdown-based content with TinaCMS',
       'SEO optimized with meta tags and structured data'
     ],
     learned:
       'Built a production-ready client website using Next.js 14 with TinaCMS for headless CMS management. Implemented responsive design with Tailwind CSS, managed static generation for performance, and delivered a solution that balances beautiful design with seamless business functionality.',
     technologies: ['Next.js', 'React', 'TypeScript', 'TinaCMS', 'Tailwind CSS', 'Markdown'],
-    githubUrl: 'https://github.com/AlexJeBoyy/Amaranthus',
+    websiteUrl: 'https://amaranthusbloemen.nl',
     images: ['/img/AmaranthusBloemen.png'],
     contributors: null
   },

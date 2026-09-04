@@ -74,8 +74,11 @@ useHead({ title: project.title })
     </div>
 
     <div class="flex flex-wrap gap-3">
-      <a :href="project.githubUrl" target="_blank" rel="noreferrer" class="btn-outline">
+      <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" rel="noreferrer" class="btn-outline">
         View on GitHub
+      </a>
+      <a v-if="project.websiteUrl" :href="project.websiteUrl" target="_blank" rel="noreferrer" class="btn-outline">
+        Visit Website
       </a>
       <NuxtLink to="/projects/" class="btn-ghost">
         Back to Projects
