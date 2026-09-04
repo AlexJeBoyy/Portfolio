@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useImagePath } from '~/composables/useImagePath'
 import { projects } from '~/data/projects'
 
 useHead({ title: 'Skills' })
+const getImagePath = useImagePath()
 
 const gameDevSkills: [string, number][] = [
   ['C#', 85],
@@ -120,7 +122,7 @@ const filteredProjects = computed(() => {
               >
                 <img
                   v-if="getSkillIcon(name)"
-                  :src="`/img/icons/${getSkillIcon(name)}`"
+                  :src="getImagePath(`/img/icons/${getSkillIcon(name)}`)"
                   :alt="name"
                   class="h-10 w-10 object-contain"
                 />
@@ -148,7 +150,7 @@ const filteredProjects = computed(() => {
               >
                 <img
                   v-if="getSkillIcon(name)"
-                  :src="`/img/icons/${getSkillIcon(name)}`"
+                  :src="getImagePath(`/img/icons/${getSkillIcon(name)}`)"
                   :alt="name"
                   class="h-10 w-10 object-contain"
                 />
@@ -177,7 +179,7 @@ const filteredProjects = computed(() => {
             >
               <img
                 v-if="getSkillIcon(name)"
-                :src="`/img/icons/${getSkillIcon(name)}`"
+                :src="getImagePath(`/img/icons/${getSkillIcon(name)}`)"
                 :alt="name"
                 class="h-10 w-10 object-contain"
               />
