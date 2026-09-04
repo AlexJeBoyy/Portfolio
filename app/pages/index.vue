@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { projects } from '~/data/projects'
+import { getSortedProjects } from '~/data/projects'
 
 useHead({ title: 'Home' })
 
-const featured = projects.slice(0, 2)
+const featured = getSortedProjects().slice(0, 2)
 const baseURL = useRuntimeConfig().app.baseURL
 
 function resolveImagePath(path: string): string {

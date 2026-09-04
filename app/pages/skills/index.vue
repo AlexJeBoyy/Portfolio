@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useImagePath } from '~/composables/useImagePath'
-import { projects } from '~/data/projects'
+import { projects, getSortedProjects } from '~/data/projects'
 
 useHead({ title: 'Skills' })
 const getImagePath = useImagePath()
@@ -85,7 +85,8 @@ const isSkillUsed = (skillName: string): boolean => {
 
 const filteredProjects = computed(() => {
   if (!selectedSkill.value) return []
-  return projects.filter((project) =>
+  const sorted = getSortedProjects()
+  return sorted.filter((project) =>
     project.technologies.some((tech) => tech.toLowerCase() === selectedSkill.value?.toLowerCase())
   )
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { projects } from '~/data/projects'
+import { getSortedProjects } from '~/data/projects'
 
 useHead({ title: 'Projects' })
 
@@ -27,15 +27,16 @@ function isModProject(technologies: string[]): boolean {
 }
 
 const filteredProjects = computed(() => {
+  const sorted = getSortedProjects()
   if (activeTab.value === 'mods') {
-    return projects.filter((project) => isModProject(project.technologies))
+    return sorted.filter((project) => isModProject(project.technologies))
   }
 
   if (activeTab.value === 'websites') {
-    return projects.filter((project) => isWebsiteProject(project.technologies))
+    return sorted.filter((project) => isWebsiteProject(project.technologies))
   }
 
-  return projects.filter((project) => isGameProject(project.technologies))
+  return sorted.filter((project) => isGameProject(project.technologies))
 })
 
 const sectionHighlight = computed(() => {

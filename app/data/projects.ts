@@ -10,6 +10,8 @@ export type Project = {
   githubUrl?: string
   websiteUrl?: string
   images: string[]
+  date: string // dd/mm/yyyy format
+  featured?: boolean
   contributors?: { name: string; link: string }[] | null
 }
 
@@ -33,6 +35,7 @@ export const projects: Project[] = [
     technologies: ['Next.js', 'React', 'TypeScript', 'TinaCMS', 'Tailwind CSS', 'Markdown'],
     websiteUrl: 'https://amaranthusbloemen.nl',
     images: ['/img/AmaranthusBloemen.png'],
+    date: '12/09/2026',
     contributors: null
   },
   {
@@ -56,6 +59,7 @@ export const projects: Project[] = [
     technologies: ['Java', 'Minecraft', 'Fabric', 'Blockbench', '3D Modeling', 'Texturing'],
     githubUrl: 'https://github.com/AlexJeBoyy/MH-Gore-Magala-mod',
     images: ['/img/GM1.png', '/img/GM2.png', '/img/GM3.png'],
+    date: '16/06/2026',
     contributors: null
   },
   {
@@ -78,9 +82,9 @@ export const projects: Project[] = [
     technologies: ['Minecraft', 'Java', 'Fabric', 'Forge', 'NeoForge', 'Quilt'],
     githubUrl: 'https://github.com/AlexJeBoyy/FleshToLeather',
     images: ['/img/RFTL.jpg'],
+    date: '16/01/2026',
     contributors: null
   },
-  
   {
     slug: 'the-judge',
     title: 'The Judge',
@@ -96,6 +100,7 @@ export const projects: Project[] = [
     learned:
       'I built the right-or-wrong judgment logic, helped with some of the animation work, and learned how to support a tense horror mood through simple interactive systems.',
     technologies: ['C#', 'Unity', 'Procreate', 'ShaderLab', 'HLSL'],
+    date: '23/06/2025',
     contributors: [
       {
         name: 'Vigo Linders',
@@ -116,6 +121,7 @@ export const projects: Project[] = [
     learned:
       'I improved my work with multi-camera setups, object interaction systems, and puzzle design that matches an art-focused museum theme. I made all of the code for (exept ui) for this project.',
     technologies: ['C#', 'Unity', 'Procreate', 'Blender', 'Clip Studio Paint'],
+    date: '29/01/2025',
     contributors: [
       {
         name: 'Livia van Leeuwen (Player assets/animation)',
@@ -148,6 +154,7 @@ export const projects: Project[] = [
     learned:
       'I made the player movement from scratch with sliding, dash and sprint mechanics. I learned a lot about how gravity and physics work in Unity.',
     technologies: ['C#', 'Unity', 'Blender'],
+    date: '07/04/2025',
     contributors: [
       {
         name: 'Vigo Linders (Shooting and telekinesis mechanics)',
@@ -180,8 +187,10 @@ export const projects: Project[] = [
     learned:
       'I learned a lot about lists, moving data between scenes, and capturing screenshots in the right format and location.',
     technologies: ['C#', 'Unity', 'Procreate', 'Aseprite'],
+    date: '04/11/2024',
     githubUrl: 'https://github.com/AlexJeBoyy/Zombie-Custom',
-    images: ['/img/Zombie4.png', '/img/Zombie1.png', '/img/Zombie2.png']
+    images: ['/img/Zombie4.png', '/img/Zombie1.png', '/img/Zombie2.png'],
+    contributors: null
   },
   {
     slug: 'robot-takeover',
@@ -191,9 +200,11 @@ export const projects: Project[] = [
     description:
       "My first self-made game. It's an FPS where you need to shoot robots to win, with two guns and a grappling hook.",
     features: ['Different guns', 'AI pathfinding', 'Grappling hook'],
+    date: '16/01/2024',
     technologies: ['C#', 'Unity'],
     images: ['/img/RobotTakeover-A.png', '/img/RobotTakeover-G.png', '/img/RobotTakeover-P.png'],
     githubUrl: 'https://github.com/AlexJeBoyy/FPS-1',
+    contributors: null
   },
   {
     slug: 'cats-vs-birds',
@@ -203,9 +214,11 @@ export const projects: Project[] = [
     description:
       'Top-down shooter where you kill birds as a cat. If you clear enemies and collect the key you can open the door and win.',
     features: ['Fish for bullets', 'Enemy raycasting', 'Lighting effects'],
+    date: '04/11/2024',
     technologies: ['C#', 'Unity'],
     images: ['/img/CVSB-Door.png', '/img/CVSB.png', '/img/CVSB-Enim.png'],
     githubUrl: 'https://github.com/AlexJeBoyy/CatsVSBirds/',
+    contributors: null
   },
   {
     slug: 'horse-jumping',
@@ -215,11 +228,31 @@ export const projects: Project[] = [
     description:
       'Horse parkour game where you can get smaller to get under obstacles. You speed up over time and can switch movement speeds.',
     features: ['Point system', 'Ducking', 'Parkour'],
+    date: '30/10/2024',
     technologies: ['C#', 'Unity', 'Aseprite'],
     images: ['/img/HJ_S.png', '/img/HJ_GO.png', '/img/HJ_Jump.png'],
     githubUrl: 'https://github.com/AlexJeBoyy/HorseGame',
+    contributors: null
   }
 ]
+
+/**
+ * Parse date string in dd/mm/yyyy format to Date object for sorting
+ */
+function parseDate(dateStr: string): Date {
+  const parts = dateStr.split('/').map(Number)
+  const day = parts[0] || 1
+  const month = parts[1] || 1
+  const year = parts[2] || 2000
+  return new Date(year, month - 1, day)
+}
+
+/**
+ * Get projects sorted by date (newest first)
+ */
+export function getSortedProjects(): Project[] {
+  return [...projects].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
+}
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug)

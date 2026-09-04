@@ -1,13 +1,13 @@
 ### To do
 
-# Add new pages for projects 
-- The judge
-- Consumed by light
-- melkbroodje
+# Need to add
 - unreal project
+- Water
+- Miltop 
+- Gambeling
+- Misschien ervaring met arduino
+- VR-Cooking
 
-- minecraft plugin
-- minecraft mod im working on
 
 # add new profile picture.
 
