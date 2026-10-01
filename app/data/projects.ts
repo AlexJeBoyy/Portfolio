@@ -40,6 +40,28 @@ export const projects: Project[] = [
     contributors: null
   },
   {
+    slug: 'burger-master',
+    title: 'Burger Master',
+    genre: 'Unity Game',
+    cardSummary: 'Virtual reality cooking game where players assemble burgers and serve them to customers',
+    description:
+    'A virtual reality cooking game where players assemble burgers and serve them to customers, focusing on immersive gameplay and realistic interactions.',
+    features: [
+      'Cooking a burger in a virtual kitchen',
+      'Snap ingredients together to create burgers',
+      'Serve assembled burgers to customers',
+      'Cooking and cutting ingredients accurately'
+    ],
+    learned:
+    'How to work with virtual reality interactions and physics in Unity and implement immersive gameplay mechanics.',
+    technologies: ['Unity', 'C#'],
+    githubUrl: ' https://github.com/AlexJeBoyy/Burger-Master',
+    images: ['/img/VRC1.png', '/img/VRC2.png', '/img/VRC3.png'],
+    date: '16/12/2024',
+    featured: true,
+    contributors: null
+  },
+  {
     slug: 'gore-magala-mod',
     title: 'Gore Magala Minecraft Mod',
     genre: 'Minecraft Mod (WIP)',
