@@ -34,7 +34,7 @@ export const projects: Project[] = [
       'Built a production-ready client website using Next.js 14 with TinaCMS for headless CMS management. Implemented responsive design with Tailwind CSS, managed static generation for performance, and delivered a solution that balances beautiful design with seamless business functionality.',
     technologies: ['Next.js', 'React', 'TypeScript', 'TinaCMS', 'Tailwind CSS', 'Markdown'],
     websiteUrl: 'https://amaranthusbloemen.nl',
-    images: ['/img/AmaranthusBloemen.png'],
+    images: ['/img/AmaranthusBloemen.png', '/img/AmaranthusBloemen2.png', '/img/AmaranthusBloemen1.png'],
     date: '12/09/2026',
     featured: true,
     contributors: null
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     ],
     learned:
     'How to work with virtual reality interactions and physics in Unity and implement immersive gameplay mechanics.',
-    technologies: ['Unity', 'C#'],
+    technologies: ['C#', 'Unity', 'VR' ],
     githubUrl: ' https://github.com/AlexJeBoyy/Burger-Master',
     images: ['/img/VRC1.png', '/img/VRC2.png', '/img/VRC3.png'],
     date: '16/12/2024',
