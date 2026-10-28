@@ -41,7 +41,7 @@ function resolveImagePath(path: string): string {
           <div class="accent-line" />
         </div>
         <p class="max-w-2xl text-lg leading-relaxed text-slate-300">
-          I'm a developer passionate about creating interactive experiences through <span class="font-bold text-blue-400">game development</span> with <span class="font-bold text-blue-400">Unity & C#</span>, combined with <span class="font-bold text-blue-400">web development</span> skills. I love solving complex problems and bringing creative ideas to life.
+          I'm a developer passionate about creating games through <span class="font-bold text-blue-400">game development</span> with <span class="font-bold text-blue-400">Unity & C#</span>, combined with <span class="font-bold text-blue-400">web development</span> skills. I love solving complex problems and bringing creative ideas to life.
         </p>
         <div class="flex flex-col gap-2 text-sm text-slate-400">
           <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-blue-500" /> Born in 2006 • Game Dev Student</span>
