@@ -5,6 +5,7 @@ useHead({ title: 'Home' })
 
 const featured = ref([])
 const baseURL = useRuntimeConfig().app.baseURL
+const showProfilePicture = false
 
 // Load random featured projects on mount to avoid hydration issues
 onMounted(() => {
@@ -18,8 +19,12 @@ function resolveImagePath(path: string): string {
 
 <template>
   <section class="space-y-12">
-    <div class="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
+    <div
+      class="grid items-center gap-12"
+      :class="{ 'lg:grid-cols-[1fr_1.2fr]': showProfilePicture }"
+    >
       <img
+        v-if="showProfilePicture"
         :src="resolveImagePath('/img/AlexFoto.jpg')"
         alt="Portrait of Alex Strikwerda"
         class="mx-auto aspect-square w-56 rounded-lg border border-slate-700 object-cover shadow-lg sm:w-80"
